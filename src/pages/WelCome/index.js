@@ -18,7 +18,6 @@ const Welcome = () => {
 
     const genderList = useMemo(() => ["male", "female"], []);
     const uid = useMemo(() => user.uid, [user]);
-    console.log("re-render-wel");
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (name === "") {

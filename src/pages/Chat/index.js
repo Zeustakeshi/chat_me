@@ -1,16 +1,14 @@
 import { memo, useContext } from "react";
-import Button from "../../components/Button";
-import { AppContext } from "../../Context/AppProvider";
+import classNames from "classnames/bind";
+import style from "./Chat.module.scss";
+import ChatHeader from "./ChatHeader";
+
+const cx = classNames.bind(style);
 
 const Chat = () => {
-    const { setMoveToChat } = useContext(AppContext);
-    const handleMoveToHome = () => {
-        setMoveToChat(false);
-    };
     return (
-        <div>
-            Chat page
-            <Button onClick={handleMoveToHome}>move to home pages</Button>
+        <div className={cx("wrapper")}>
+            <ChatHeader />
         </div>
     );
 };

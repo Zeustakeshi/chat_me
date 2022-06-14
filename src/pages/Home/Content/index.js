@@ -9,7 +9,6 @@ import AddFriend from "./AddFriend";
 const cx = classNames.bind(style);
 
 const Content = () => {
-    console.log("render-content");
     const { userData } = useContext(AppContext);
     return (
         <div className={cx("content")}>

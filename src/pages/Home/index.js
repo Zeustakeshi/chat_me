@@ -11,13 +11,9 @@ import Content from "./Content";
 const cx = classNames.bind(style);
 
 const Home = () => {
-    console.log("re-render-home");
-
-    const { moveToChat, setMoveToChat } = useContext(AppContext);
+    const { moveToChat } = useContext(AppContext);
     const { isNewUser } = useContext(AuthContext);
-    const handleMoveToChat = () => {
-        setMoveToChat(true);
-    };
+
     return (
         <>
             {isNewUser ? (

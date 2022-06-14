@@ -36,39 +36,27 @@ const Login = () => {
                 groups: [],
                 chats: [],
                 id: id,
-                notify: [
-                    {
-                        userName: "Minh Hiếu",
-                        gender: "male",
-                        photoURL: "",
-                        notify: `😍 Let's start with your first message 😍.`,
-                        type: null,
-                    },
-                    {
-                        userName: "Minh Hiếu",
-                        photoURL: "",
-                        gender: "male",
-                        notify: `👋Hello!👋  
-                        well come to Chat me.`,
-                        type: null,
-                    },
-                ],
+                uid: user.uid,
 
                 notify: [
                     {
                         userName: "Minh Hiếu",
                         gender: "male",
-                        photoURL: "",
+                        photoURL:
+                            "https://s120-ava-talk.zadn.vn/3/5/5/3/1/120/288cef578202ea573aa2403a70ce5a0a.jpg",
                         notify: `😍 Let's start with your first message 😍.`,
                         type: null,
+                        uid: "sfsdfdsfsdfsdfs",
                     },
                     {
                         userName: "Minh Hiếu",
-                        photoURL: "",
+                        photoURL:
+                            "https://s120-ava-talk.zadn.vn/3/5/5/3/1/120/288cef578202ea573aa2403a70ce5a0a.jpg",
                         gender: "male",
                         notify: `👋Hello!👋  
                         well come to Chat me.`,
                         type: null,
+                        uid: "saasdasdasdasdas",
                     },
                 ],
 
