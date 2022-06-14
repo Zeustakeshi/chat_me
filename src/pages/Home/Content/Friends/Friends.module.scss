@@ -1,0 +1,120 @@
+$btn-remove-size: 40px;
+
+.wrapper {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px;
+    .title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        text-align: left;
+        width: 100%;
+    }
+    &::after {
+        transition: all 0.25s ease-out;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        width: 80%;
+        height: 1px;
+        background-color: #eee;
+    }
+}
+
+.friend-list {
+    padding: 0;
+}
+
+.friend-item {
+    width: 100%;
+    margin-bottom: 10px;
+    // hiden scrollbar
+    overflow: auto;
+    overflow-y: hidden;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        height: 0 !important;
+        width: 0 !important;
+        displacentery: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(238, 238, 238, 0.475);
+    }
+
+    &-content {
+        width: calc(100% + $btn-remove-size);
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    &-mess {
+        margin-left: 10px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        width:200px;
+        
+        .friend-mess{
+            overflow:hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+            width: 100%;
+        }
+
+    }
+}
+
+.friend-remove {
+    position: absolute;
+    top: 50%;
+    right: calc((-1 * $btn-remove-size) + 20px);
+    transform: translateY(-50%);
+    background-color: var(--warning);
+    padding: 10px;
+    color: var(--white);
+    width: $btn-remove-size;
+    height: $btn-remove-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.friend-name {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.friend-mess {
+    font-size: 18px;
+}
+
+.friend-mess.is-new {
+    font-weight: 500;
+}
+
+.friend-title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    width: 100%;
+}
