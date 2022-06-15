@@ -104,17 +104,17 @@
 
 .input-content {
     position: absolute;
-    bottom: 0;
+    top: calc(100% - 12vh);
     transition: all 0.25s ease-in;
     width: 100%;
     left: 0;
-    height: 10vh;
-    padding: 10px;
+    height: 12vh;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
+    background-color: var(--white);
     input {
         padding: 8px 20px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;

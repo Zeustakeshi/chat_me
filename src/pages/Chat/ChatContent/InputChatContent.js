@@ -81,7 +81,7 @@ function InputChatContent({ className }) {
             {input ? (
                 <button
                     className={cx("btn-send")}
-                    onClick={() => {
+                    onClick={(e) => {
                         setIsSubmit(true);
                     }}
                 >

@@ -1,10 +1,10 @@
 .wrapper {
     position: absolute;
-    bottom: 0;
+    top: calc(100% - 10vh);
     transition: all 0.25s ease-in;
     width: 100%;
     left: 0;
-    height: 6vh;
+    height: 10vh;
     background-color: var(--primaty-strong);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;

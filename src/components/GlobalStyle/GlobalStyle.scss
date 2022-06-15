@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Charis+SIL&family=Roboto:wght@400;500&display=swap");
+
 :root {
     --primary: skyblue;
     --primaty-strong: rgb(116, 152, 191);
@@ -10,6 +12,9 @@
 
 * {
     box-sizing: border-box;
+    font-family: "Charis SIL", serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
 }
 
 body {
