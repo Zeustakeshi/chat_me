@@ -1,4 +1,4 @@
-import { useContext, createContext, useState, useEffect } from "react";
+import { useContext, createContext, useState } from "react";
 import { AuthContext } from "./AuthProvider";
 import useFireStore from "../hooks/useFirestore";
 
@@ -13,7 +13,11 @@ const AppProvider = ({ children }) => {
         gender: "",
     });
     const { user } = useContext(AuthContext);
-    const userData = useFireStore("user", user.uid && user.uid);
+    const userData = useFireStore("user", user.uid && user.uid, {
+        userName: "",
+        photoURL: "",
+        notify: [],
+    });
 
     return (
         <AppContext.Provider

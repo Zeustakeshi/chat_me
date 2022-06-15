@@ -14,6 +14,9 @@ const SearchResult = ({ results, searchValue }) => {
             photoURL: result.photoURL,
             chatId: result.chatId,
             gender: result.gender,
+            email: result.email,
+            id: result.id,
+            uid: result.uid,
         });
     };
     return (

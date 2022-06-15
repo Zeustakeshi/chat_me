@@ -1,12 +1,10 @@
 import classNames from "classnames/bind";
-import Avatar from "../../../components/Avatar";
-import style from "./Header.module.scss";
-import Button from "../../../components/Button";
-import { auth } from "../../../fireabse/config";
+import Avatar from "../Avatar";
+import style from "./MenuProfile.module.scss";
 import { memo } from "react";
 
 const cx = classNames.bind(style);
-const MenuProfile = ({ userData, className, setShow }) => {
+const MenuProfile = ({ userData, className, setShow, children }) => {
     return (
         <div
             className={cx("menu", {
@@ -40,15 +38,7 @@ const MenuProfile = ({ userData, className, setShow }) => {
                     {userData.gender}
                 </p>
             </div>
-            <Button
-                type='warning'
-                className={cx("btn-logout")}
-                onClick={() => {
-                    auth.signOut();
-                }}
-            >
-                Logout
-            </Button>
+            {children}
         </div>
     );
 };

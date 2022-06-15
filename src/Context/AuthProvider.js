@@ -25,7 +25,7 @@ const AuthProvider = ({ children }) => {
         return () => {
             unsubscribe();
         };
-    }, [navigate, isNewUser]);
+    }, [navigate]);
     return (
         <AuthContext.Provider
             value={{

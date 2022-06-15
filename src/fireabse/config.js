@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import {
     getAuth,
-    connectAuthEmulator,
+    // connectAuthEmulator,
     GoogleAuthProvider,
     signInWithPopup,
 } from "firebase/auth";
@@ -12,7 +12,7 @@ import {
     doc,
     setDoc,
     updateDoc,
-    connectFirestoreEmulator,
+    // connectFirestoreEmulator,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -33,10 +33,10 @@ const auth = getAuth();
 const ggProvider = new GoogleAuthProvider();
 const db = getFirestore();
 
-if (window.location.hostname === "localhost") {
-    connectFirestoreEmulator(db, "localhost", 8080);
-}
-connectAuthEmulator(auth, "http://localhost:9099");
+// if (window.location.hostname === "localhost") {
+//     connectFirestoreEmulator(db, "localhost", 8088);
+// }
+// connectAuthEmulator(auth, "http://localhost:9098");
 
 export {
     analytics,

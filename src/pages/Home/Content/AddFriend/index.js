@@ -62,6 +62,7 @@ function AddFriend({ userData }) {
                         photoURL: userData.photoURL,
                         userName: userData.userName,
                         uid: userData.uid,
+                        email: userData.email,
                         id: userData.id,
                         type: "boolean",
                         notify: `Hello!👋👋

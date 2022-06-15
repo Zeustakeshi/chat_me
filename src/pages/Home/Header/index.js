@@ -3,8 +3,10 @@ import { memo, useContext, useEffect, useState } from "react";
 import Avatar from "../../../components/Avatar";
 import style from "./Header.module.scss";
 import { AppContext } from "../../../Context/AppProvider";
-import MenuProfile from "./MenuProfile";
+import MenuProfile from "../../../components/MenuProfile";
 import Notify from "./Notify";
+import Button from "../../../components/Button";
+import { auth } from "../../../fireabse/config";
 
 const cx = classNames.bind(style);
 const Header = () => {
@@ -18,6 +20,7 @@ const Header = () => {
             : userData.userName.slice(0, 30) + "...";
 
     useEffect(() => {
+        if (userData.notify && userData.notify.length < 1) return;
         setIsNotify(true);
     }, [userData.notify]);
     return (
@@ -51,8 +54,19 @@ const Header = () => {
                         ...userData,
                         userName: userName,
                     }}
+                    className={cx("menu-profile-home")}
                     setShow={setShowMenu}
-                />
+                >
+                    <Button
+                        type='warning'
+                        className={cx("btn-logout")}
+                        onClick={() => {
+                            auth.signOut();
+                        }}
+                    >
+                        Logout
+                    </Button>
+                </MenuProfile>
             )}
             {showNotify && (
                 <Notify

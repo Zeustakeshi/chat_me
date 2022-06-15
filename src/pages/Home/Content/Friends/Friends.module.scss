@@ -62,24 +62,19 @@ $btn-remove-size: 40px;
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
+        width: 200px;
 
-        width:200px;
-        
-        .friend-mess{
-            overflow:hidden;
-            white-space:nowrap;
-            text-overflow:ellipsis;
+        .friend-mess {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             width: 100%;
         }
-
     }
 }
 
 .friend-remove {
-    position: absolute;
-    top: 50%;
-    right: calc((-1 * $btn-remove-size) + 20px);
-    transform: translateY(-50%);
+    transform: translateX(200px);
     background-color: var(--warning);
     padding: 10px;
     color: var(--white);

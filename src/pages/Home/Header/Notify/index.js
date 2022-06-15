@@ -43,15 +43,8 @@ const Notifi = ({ userData, className, setShow }) => {
                                 key={index}
                                 index={index}
                                 notifyList={notifyList}
-                                type={notify.type}
-                                photoURL={notify.photoURL}
-                                notify={notify.notify}
-                                userName={notify.userName}
-                                gender={notify.gender}
                                 userData={userData}
-                                friendUId={notify.uid}
-                                friendId={notify.id}
-                                friendGender={notify.gender}
+                                notify={notify}
                             />
                         ))
                     )}
