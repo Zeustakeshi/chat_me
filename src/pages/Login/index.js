@@ -70,6 +70,7 @@ const Login = () => {
     return (
         <div className={cx("wrapper")}>
             <img className={cx("icon-chat")} src={imgs.chat_icon} />
+            <p className={cx("title")}>Chat ME</p>
             <Button size={"large"} onClick={hanldeClick}>
                 Login
             </Button>
