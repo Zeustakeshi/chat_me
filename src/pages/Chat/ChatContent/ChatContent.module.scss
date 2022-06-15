@@ -134,7 +134,7 @@
     }
 
     button {
-        padding: 0;
+        padding: 0px;
         width: 40px;
         height: 40px;
         display: flex;
@@ -143,18 +143,21 @@
         font-size: 25px;
         outline: none;
         border: none;
+        line-height: 1.2;
         cursor: pointer;
-        border-radius: 1000px;
+        border-radius: 10px;
         transition: all 0.25s ease-in;
         margin-left: 20px;
         background-color: var(--white);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
     }
 
     .btn-like {
         color: #ff6651;
-        &:hover {
-            background-color: #ff655139;
-        }
     }
 
     .btn-send {

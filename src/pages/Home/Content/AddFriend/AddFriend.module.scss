@@ -4,11 +4,12 @@
     transition: all 0.25s ease-in;
     width: 100%;
     left: 0;
-    height: 10vh;
+    height: 60vh;
     background-color: var(--primaty-strong);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 20px;
+    font-size: 20px;
 
     .form {
         display: none;
@@ -35,8 +36,8 @@
 }
 
 .wrapper.is-show {
-    bottom: 0;
-    height: 60vh;
+    top: calc(100% - 10vh);
+    transform: translateY(calc(-100% + 10vh));
 
     .form.is-show {
         transition: all 0.35s linear;
